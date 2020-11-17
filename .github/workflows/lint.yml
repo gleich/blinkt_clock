@@ -11,7 +11,7 @@ jobs:
       - name: Run Golangci Linter
         uses: golangci/golangci-lint-action@v1
         with:
-          version: v1.30
+          version: v2.3.0
   gomod:
     runs-on: ubuntu-latest
     steps:
