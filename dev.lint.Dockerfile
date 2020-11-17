@@ -1,8 +1,8 @@
 FROM golangci/golangci-lint:v1.30.0
 
 # Meta data
-LABEL maintainer="project_author_email"
-LABEL description="project_description"
+LABEL maintainer="email@mattglei.ch"
+LABEL description="🚦 A clock using a group of Pimoroni Blinkts each attached to an RPi"
 
 # Copying over files
 COPY . /usr/src/app

@@ -1,19 +1,18 @@
 <!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich"]:end -->
 
-# Run `init.py`
 
-# project_name
+# blinkt-clock
 
-project_description
+🚦 A clock using a group of Pimoroni Blinkts each attached to an RPi
 
-![build](https://github.com/github_username/project_name/workflows/build/badge.svg)
-![test](https://github.com/github_username/project_name/workflows/test/badge.svg)
-![lint](https://github.com/github_username/project_name/workflows/lint/badge.svg)
-![release](https://github.com/github_username/project_name/workflows/release/badge.svg)
+![build](https://github.com/Matt-Gleich/blinkt-clock/workflows/build/badge.svg)
+![test](https://github.com/Matt-Gleich/blinkt-clock/workflows/test/badge.svg)
+![lint](https://github.com/Matt-Gleich/blinkt-clock/workflows/lint/badge.svg)
+![release](https://github.com/Matt-Gleich/blinkt-clock/workflows/release/badge.svg)
 
 ## 🙌 Contributing
 
-Before contributing, please read the [CONTRIBUTING.md file](https://github.com/Matt-Gleich/project_name/blob/master/CONTRIBUTING.md)
+Before contributing, please read the [CONTRIBUTING.md file](https://github.com/Matt-Gleich/blinkt-clock/blob/master/CONTRIBUTING.md)
 
 <!-- DO NOT REMOVE - contributor_list:start -->
 ## 👥 Contributors
