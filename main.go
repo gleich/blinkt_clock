@@ -1,22 +1,28 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"time"
 
 	"github.com/Matt-Gleich/logoru"
+	"github.com/alexellis/blinkt_go"
 )
 
 var (
 	timeLevel  string
 	lightLevel int
+	blinkt     = blinkt_go.NewBlinkt(1.0)
 )
 
 func main() {
+	blinkt.SetClearOnExit(true)
+	blinkt.Setup()
 	parseArgs()
-	getLevel()
-	fmt.Println(lightLevel)
+	for {
+		getLevel()
+		setLevel()
+		time.Sleep(time.Millisecond * 1)
+	}
 }
 
 func parseArgs() {
@@ -39,4 +45,13 @@ func getLevel() {
 		percentage = float32(now.Second()) / 60
 	}
 	lightLevel = int(percentage * 10)
+}
+
+// Set the light level
+func setLevel() {
+	blinkt.Clear()
+	for pixel := 0; pixel < lightLevel; pixel++ {
+		blinkt.SetPixel(pixel, 0, 255, 0)
+	}
+	blinkt.Show()
 }
