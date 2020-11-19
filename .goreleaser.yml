@@ -1,7 +1,7 @@
 release:
   github:
     owner: Matt-Gleich
-    name: 'blinkt-clock'
+    name: 'blinkt_clock'
   prerelease: auto
 before:
   hooks:

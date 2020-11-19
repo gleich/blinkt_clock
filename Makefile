@@ -3,15 +3,15 @@
 ##########
 
 build-docker-prod:
-	docker build -f docker/Dockerfile -t mattgleich/blinkt-clock:latest .
+	docker build -f docker/Dockerfile -t mattgleich/blinkt_clock:latest .
 build-docker-dev:
-	docker build -f docker/dev.Dockerfile -t mattgleich/blinkt-clock:test .
+	docker build -f docker/dev.Dockerfile -t mattgleich/blinkt_clock:test .
 build-docker-dev-lint:
-	docker build -f docker/dev.lint.Dockerfile -t mattgleich/blinkt-clock:lint .
+	docker build -f docker/dev.lint.Dockerfile -t mattgleich/blinkt_clock:lint .
 build-go:
 	go get -v -t -d ./...
 	go build -v .
-	rm blinkt-clock
+	rm blinkt_clock
 
 #########
 # Linting
@@ -30,7 +30,7 @@ lint-hadolint:
 	hadolint docker/dev.Dockerfile
 	hadolint docker/dev.lint.Dockerfile
 lint-in-docker: build-docker-dev-lint
-	docker run mattgleich/blinkt-clock:lint
+	docker run mattgleich/blinkt_clock:lint
 
 #########
 # Testing
@@ -40,7 +40,7 @@ test-go:
 	go get -v -t -d ./...
 	go test -v ./...
 test-in-docker: build-docker-dev
-	docker run mattgleich/blinkt-clock:test
+	docker run mattgleich/blinkt_clock:test
 
 ##########
 # Grouping

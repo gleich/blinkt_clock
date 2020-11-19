@@ -1,4 +1,4 @@
-module github.com/Matt-Gleich/blinkt-clock
+module github.com/Matt-Gleich/blinkt_clock
 
 go 1.15
 

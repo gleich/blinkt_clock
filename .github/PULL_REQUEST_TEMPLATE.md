@@ -21,5 +21,5 @@ This PR resolves #22
 -->
 
 <!--
-Thank you for your contribution to blinkt-clock!
+Thank you for your contribution to blinkt_clock!
 -->

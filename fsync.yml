@@ -1,7 +1,7 @@
 commit_message: 🔄 Update file via sync
 replace:
   - before: project_name
-    after: blinkt-clock
+    after: blinkt_clock
   - before: project_description
     after: 🚦 A clock using a group of Pimoroni Blinkts each attached to an RPi
   - before: github_username
