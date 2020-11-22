@@ -5,8 +5,6 @@
 
 🚦 A clock using a group of Pimoroni Blinkts each attached to an RPi
 
-![build](https://github.com/Matt-Gleich/blinkt_clock/workflows/build/badge.svg)
-![test](https://github.com/Matt-Gleich/blinkt_clock/workflows/test/badge.svg)
 ![lint](https://github.com/Matt-Gleich/blinkt_clock/workflows/lint/badge.svg)
 ![release](https://github.com/Matt-Gleich/blinkt_clock/workflows/release/badge.svg)
 
