@@ -21,7 +21,7 @@ func main() {
 	for {
 		getLevel()
 		setLevel()
-		time.Sleep(time.Millisecond * 1)
+		time.Sleep(time.Millisecond * 100)
 	}
 }
 
