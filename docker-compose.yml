@@ -1,0 +1,9 @@
+version: '3'
+services:
+  contrihat:
+    build: .
+    privileged: true
+    logging:
+      options:
+        max-size: 200mb
+    restart: unless-stopped
