@@ -11,6 +11,7 @@ import (
 var (
 	timeLevel  string
 	lightLevel int
+	update     bool
 	lights     = blinkt.NewBlinkt(1.0)
 )
 
@@ -20,8 +21,11 @@ func main() {
 	parseArgs()
 	for {
 		getLevel()
-		setLevel()
-		time.Sleep(time.Millisecond * 100)
+		if update {
+			setLevel()
+			update = false
+		}
+		time.Sleep(time.Millisecond * 1)
 	}
 }
 
@@ -44,7 +48,10 @@ func getLevel() {
 	default:
 		percentage = float32(now.Second()) / 60
 	}
-	lightLevel = int(percentage * 10)
+	newestLevel := int(percentage * 10)
+	if lightLevel != newestLevel {
+		update = true
+	}
 	logoru.Info("Got time level:", percentage)
 }
 
