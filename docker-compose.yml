@@ -1,6 +1,6 @@
 version: '3'
 services:
-  contrihat:
+  blinkt_clock:
     build: .
     privileged: true
     logging:

@@ -50,7 +50,7 @@ func getLevel() {
 // Set the light level
 func setLevel() {
 	lights.Clear()
-	for pixel := 0; pixel < lightLevel; pixel++ {
+	for pixel := 0; pixel < lightLevel-1; pixel++ {
 		lights.SetPixel(pixel, 0, 255, 0)
 	}
 	lights.Show()
