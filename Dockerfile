@@ -1,20 +1,21 @@
-FROM golang:1.15-alpine3.12 AS builder
+# hadolint ignore=DL3006,DL3007
+FROM resin/rpi-raspbian AS builder
 
-# Meta data:
-LABEL maintainer="email@mattglei.ch"
-LABEL description="🚦 A clock using a group of Pimoroni Blinkts each attached to an RPi"
+# hadolint ignore=DL3008, DL3015
+RUN apt-get update && \
+    apt-get install -qy build-essential wiringpi git curl ca-certificates && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copying over all the files:
+
+RUN curl -sSLO https://golang.org/dl/go1.15.5.linux-armv6l.tar.gz && \
+    mkdir -p /usr/local/go && \
+    tar -xvf go1.15.5.linux-armv6l.tar.gz -C /usr/local/go/ --strip-components=1
+
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-# Installing dependencies/
 RUN go get -v -t -d ./...
-
-# Build the app
 RUN go build -o app .
 
-# hadolint ignore=DL3006,DL3007
-FROM alpine:latest
-COPY --from=builder /usr/src/app/app .
 CMD ["./app"]
