@@ -45,6 +45,7 @@ func getLevel() {
 		percentage = float32(now.Second()) / 60
 	}
 	lightLevel = int(percentage * 10)
+	logoru.Info("Got time level:", percentage)
 }
 
 // Set the light level
@@ -54,4 +55,5 @@ func setLevel() {
 		lights.SetPixel(pixel, 0, 255, 0)
 	}
 	lights.Show()
+	logoru.Info("Updated lights")
 }
